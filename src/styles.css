@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+/* Calculator container */
+#calculator {
+  border-radius: 20px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dark {
+  background: #1e1e2f;
+  color: #fff;
+}
+
+.light {
+  background: #f5f5f5;
+  color: #000;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: #ff4081;
+  color: #fff;
+}
+
+.light .theme-toggle {
+  background-color: #555;
+}
+
+/* Formula & Display */
+#formula {
+  color: #aaa;
+  font-size: 1rem;
+  min-height: 20px;
+  text-align: right;
+  padding: 5px 10px;
+}
+
+.display {
+  font-size: 2.2rem;
+  text-align: right;
+  padding: 10px;
+  border-bottom: 2px solid #444;
+  margin-bottom: 15px;
+  min-height: 40px;
+}
+
+.dark .display { color: #fff; }
+.light .display { color: #000; }
+
+.error {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+/* Keypad grid */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+#clear {
+  background: #ff4d4d;
+  grid-column: span 2;
+}
+
+#equals {
+  background: #1abc9c;
+  grid-row: span 2;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.dark button { background: #333; color: #fff; }
+.dark #clear { background: #ff4d4d; }
+.dark #equals { background: #1abc9c; }
+
+.light button { background: #ddd; color: #000; }
+.light #clear { background: #ff4d4d; }
+.light #equals { background: #1abc9c; }
+
+/* History panel */
+.history {
+  margin-top: 15px;
+  max-height: 150px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: right;
+}
+
+.history h3 {
+  margin-bottom: 5px;
+}

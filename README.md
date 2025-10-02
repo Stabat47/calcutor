@@ -110,5 +110,5 @@ This project is licensed under the **MIT License** – feel free to use, modify,
 ---
 
 ## 👤 Author
-- **Your Name**  
+- **Landoh Clansy**  
 - GitHub: [@Stabat47](https://github.com/Stabat47)
